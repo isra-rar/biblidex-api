@@ -27,7 +27,7 @@ A API expõe dois endpoints principais para interagir com os dados dos personage
 
 **Endpoint:**
 ```
-GET /api/personagens
+GET /bible-characters
 ```
 
 **Descrição:** Retorna todos os personagens bíblicos cadastrados no sistema.
@@ -60,7 +60,7 @@ GET /api/personagens
 
 **Endpoint:**
 ```
-GET /api/personagens/{id}
+GET /bible-characters/{id}
 ```
 
 **Descrição:** Retorna os detalhes de um personagem bíblico específico com base no ID fornecido.
@@ -85,11 +85,26 @@ GET /api/personagens/{id}
 }
 ```
 
-## Como Rodar o Projeto
+## Como Rodar o Projeto via Docker
+1. Clone o repositório no docker hub:
+   ```bash
+   docker pull isr4/biblidex-api-app
+   cd biblidex-api-app
+   ```
+2. Execute o comando docker-compose up para rodar o app localmente:
+   ```bash
+   docker-compose up -d (-d para rodar em modo interativo)
+   ```
+3. Acesse a API em:
+   ```
+   http://localhost:8080/bible-characters
+   ```
+
+## Como Rodar o Projeto Locamente
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/biblidex.git
+   git clone  https://github.com/isra-rar/biblidex-api.git
    cd biblidex
    ```
 
@@ -109,8 +124,10 @@ GET /api/personagens/{id}
 
 4. Acesse a API em:
    ```
-   http://localhost:8080/api/personagens
+   http://localhost:8080/
    ```
+
+
 
 ## Como Contribuir
 
