@@ -84,22 +84,6 @@ GET /bible-characters/{id}
   "error": "Personagem não encontrado."
 }
 ```
-
-## Como Rodar o Projeto via Docker
-1. Clone o repositório no docker hub:
-   ```bash
-   docker pull isr4/biblidex-api-app:1.0
-   cd biblidex-api-app
-   ```
-2. Execute o comando docker-compose up para rodar o app localmente:
-   ```bash
-   docker-compose up -d (-d para rodar em modo interativo)
-   ```
-3. Acesse a API em:
-   ```
-   http://localhost:8080/bible-characters
-   ```
-
 ## Como Rodar o Projeto Locamente
 
 1. Clone o repositório:
@@ -107,27 +91,16 @@ GET /bible-characters/{id}
    git clone  https://github.com/isra-rar/biblidex-api.git
    cd biblidex
    ```
-
-2. Configure o banco de dados PostgreSQL no arquivo `application.yml`:
-   ```yaml
-   spring:
-     datasource:
-       url: jdbc:postgresql://localhost:5432/biblidex
-       username: seu-usuario
-       password: sua-senha
+2. Execute o comando docker (pre-requisito ter docker instalado)
+  ```bash
+   docker-compose up -d (para rodar em modo interativo -d)
    ```
-
-3. Execute o projeto com Maven:
+3. O projeto irá baixar a imagem docker da aplicação e do postgres
+   
+5. Acesso o projeto pelo
    ```bash
-   mvn spring-boot:run
+     http://localhost:8080/bible-characters
    ```
-
-4. Acesse a API em:
-   ```
-   http://localhost:8080/
-   ```
-
-
 
 ## Como Contribuir
 
