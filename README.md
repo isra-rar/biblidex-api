@@ -88,7 +88,7 @@ GET /bible-characters/{id}
 ## Como Rodar o Projeto via Docker
 1. Clone o repositório no docker hub:
    ```bash
-   docker pull isr4/biblidex-api-app
+   docker pull isr4/biblidex-api-app:1.0
    cd biblidex-api-app
    ```
 2. Execute o comando docker-compose up para rodar o app localmente:
